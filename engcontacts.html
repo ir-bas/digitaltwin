@@ -14,21 +14,29 @@
             <a href="contacts.html"><button id="translateButton">Български</button></a>
         </div>
     </header>
+
+    <!-- RESPONSIVE NAV -->
     <nav>
-        <div class="container">
-            <a href="engindex.html">Home</a>
-            <a href="engforTheProject.html">Project</a>
-            <a href="engworkPakages.html">Work Packages</a>
-            <a href="engreports.html">Results</a>
-            <a href="engpublications.html">Publications</a>
-            <a href="engevents.html">Events</a>
-            <a href="engscientificTeam.html">Team</a> 
-            <a class ="active" href="engcontacts.html">Contact us</a>            
+        <div class="container nav-wrap">
+            <button class="nav-toggle" id="navToggle"
+                    aria-expanded="false" aria-controls="navLinks">
+                ☰ Menu
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="engindex.html">Home</a>
+                <a href="engforTheProject.html">Project</a>
+                <a href="engworkPakages.html">Work Packages</a>
+                <a href="engreports.html">Results</a>
+                <a href="engpublications.html">Publications</a>
+                <a href="engevents.html">Events</a>
+                <a href="engscientificTeam.html">Team</a>
+                <a class="active" href="engcontacts.html">Contact us</a>
+            </div>
         </div>
     </nav>
+
     <div class="container">
-        <!-- Your content goes here -->
-        
         <h3>Contacts</h3>
 
         <h4>Applying organisation</h4>
@@ -38,42 +46,49 @@
         <p>Assist. Prof. Ph.D. Penio Lebamovski</p>
 
         <h4>Coordinator’s address</h4>
-        <p>Institute of Robotics, Veliko Tarnovo Branch, 5 Nish str., 5000 Veliko Tarnovo, BULGARIA </p>
+        <p>
+            Institute of Robotics, Veliko Tarnovo Branch,<br>
+            5 Nish St., 5000 Veliko Tarnovo, Bulgaria
+        </p>
 
-        <p><b>Phone: </b>+359 89 865 3554 &emsp; &emsp; &emsp; &emsp; &emsp; <b>Email:</b> p.lebamovski@abv.bg</p>
-     
-
-    
+        <p>
+            <b>Phone:</b> +359 89 865 3554
+            &emsp;&emsp;
+            <b>Email:</b> p.lebamovski@abv.bg
+        </p>
     </div>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                
                 <div class="footer-section">
-                    
-                    <p>Research, mathematical analysis and assessment of the influence of stress on cardiac data
-                    </p>
-                    <p>Contract to the "Scientific Research" Fund:
-                        </p>
-                        <p>КП-06-М72/1 from 05.12.2023</p>
+                    <p>Research, mathematical analysis and assessment of the influence of stress on cardiac data</p>
+                    <p>Contract to the "Scientific Research" Fund:</p>
+                    <p>KP-06-M72/1 from 05.12.2023</p>
                 </div>
-                
 
                 <div class="footer-section">
                     <img class="logoFooter" src="img/fni-bg.png" alt="Institute of Robotics Logo">
                 </div>
-
-                                
             </div>
 
-            <br>
-            <br>
-            <br>
+            <br><br><br>
+
             <div class="copyright">
                 <p>© The published materials are subject to copyright.</p>
             </div>
         </div>
     </footer>
+
+    <!-- NAV TOGGLE SCRIPT -->
+    <script>
+        const btn = document.getElementById('navToggle');
+        const links = document.getElementById('navLinks');
+
+        btn.addEventListener('click', () => {
+            const isOpen = links.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    </script>
 </body>
 </html>

@@ -19,16 +19,24 @@
         </div>
     </header>
 
+    <!-- RESPONSIVE NAV -->
     <nav>
-        <div class="container">
-            <a href="engindex.html">Home</a>
-            <a href="engforTheProject.html">Project</a>
-            <a href="engworkPakages.html">Work Packages</a>
-            <a href="engreports.html">Results</a>
-            <a class="active" href="engpublications.html">Publications</a>
-            <a href="engevents.html">Events</a>
-            <a href="engscientificTeam.html">Team</a>
-            <a href="engcontacts.html">Contact us</a>
+        <div class="container nav-wrap">
+            <button class="nav-toggle" id="navToggle"
+                    aria-expanded="false" aria-controls="navLinks">
+                ☰ Menu
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="engindex.html">Home</a>
+                <a href="engforTheProject.html">Project</a>
+                <a href="engworkPakages.html">Work Packages</a>
+                <a href="engreports.html">Results</a>
+                <a class="active" href="engpublications.html">Publications</a>
+                <a href="engevents.html">Events</a>
+                <a href="engscientificTeam.html">Team</a>
+                <a href="engcontacts.html">Contact us</a>
+            </div>
         </div>
     </nav>
 
@@ -196,5 +204,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- NAV TOGGLE SCRIPT -->
+    <script>
+        const btn = document.getElementById('navToggle');
+        const links = document.getElementById('navLinks');
+
+        btn.addEventListener('click', () => {
+            const isOpen = links.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    </script>
 </body>
 </html>

@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакти</title>
     <link rel="stylesheet" href="style/style.css">
-    
 </head>
 <body>
     <header>
         <div class="container">
             <img class="logo" src="img/new logo.png" alt="Institute of Robotics Logo">
-            <h1 class="heading">Изследване, математически анализ и оценка влиянието на стреса върху кардиологични данни
-                </h1>
+            <h1 class="heading">
+                Изследване, математически анализ и оценка влиянието на стреса върху кардиологични данни
+            </h1>
             <a href="engcontacts.html"><button id="translateButton">English</button></a>
         </div>
     </header>
+
+    <!-- RESPONSIVE NAV -->
     <nav>
-        <div class="container">
-            <a  href="index.html">Начало</a>
-            <a href="forTheProject.html">За проекта</a>
-            <a href="workPakages.html">Работни пакети</a>
-            <a href="reports.html">Резултати</a>
-            <a href="publications.html">Публикации</a>
-            <a href="events.html">Събития</a>
-            <a href="scientificTeam.html">Екип</a>
-            <a class ="active" href="contacts.html">Контакти</a>
-            
+        <div class="container nav-wrap">
+            <button class="nav-toggle" id="navToggle"
+                    aria-expanded="false" aria-controls="navLinks">
+                ☰ Меню
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Начало</a>
+                <a href="forTheProject.html">За проекта</a>
+                <a href="workPakages.html">Работни пакети</a>
+                <a href="reports.html">Резултати</a>
+                <a href="publications.html">Публикации</a>
+                <a href="events.html">Събития</a>
+                <a href="scientificTeam.html">Екип</a>
+                <a class="active" href="contacts.html">Контакти</a>
+            </div>
         </div>
     </nav>
+
     <div class="container">
-        <!-- Your content goes here -->
-        
         <h3>Контакти</h3>
 
         <h4>Базова организация</h4>
@@ -41,42 +48,49 @@
         <p>Главен асистент д-р Пеньо Лебамовски</p>
 
         <h4>Адрес</h4>
-        <p>Институт по роботика, филиал В.Търново, В.Търново 5000, ул. “Ниш“ 5 </p>
+        <p>
+            Институт по роботика, филиал В. Търново,<br>
+            гр. Велико Търново 5000, ул. „Ниш“ №5
+        </p>
 
-        <p><b>Телeфон: </b>+359 89 865 3554 &emsp; &emsp; &emsp; &emsp; &emsp; <b>Email:</b> p.lebamovski@abv.bg</p>
-     
-
-    
+        <p>
+            <b>Телефон:</b> +359 89 865 3554
+            &emsp;&emsp;
+            <b>Email:</b> p.lebamovski@abv.bg
+        </p>
     </div>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                
                 <div class="footer-section">
-                    
                     <p>Изследване, математически анализ и оценка влиянието на стреса върху кардиологични данни</p>
-                    <p>Договор към Фонд „Научни Изследвания“:
-                        </p>
-                        <p>КП-06-М72/1 от 05.12.2023</p>
+                    <p>Договор към Фонд „Научни Изследвания“:</p>
+                    <p>КП-06-М72/1 от 05.12.2023</p>
                 </div>
-                
 
                 <div class="footer-section">
                     <img class="logoFooter" src="img/fni-bg.png" alt="Institute of Robotics Logo">
                 </div>
-
-                                
             </div>
 
-            <br>
-            <br>
-            <br>
+            <br><br><br>
+
             <div class="copyright">
                 <p>© Публикуваните материали са обект на авторско право.</p>
             </div>
         </div>
     </footer>
 
+    <!-- NAV TOGGLE SCRIPT -->
+    <script>
+        const btn = document.getElementById('navToggle');
+        const links = document.getElementById('navLinks');
+
+        btn.addEventListener('click', () => {
+            const isOpen = links.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    </script>
 </body>
 </html>

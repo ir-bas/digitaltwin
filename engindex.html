@@ -14,79 +14,82 @@
             <a href="index.html"><button id="translateButton">Български</button></a>
         </div>
     </header>
+
     <nav>
-        <div class="container">
-            <a class ="active" href="engindex.html">Home</a>
-            <a href="engforTheProject.html">Project</a>
-            <a href="engworkPakages.html">Work Packages</a>
-            <a href="engreports.html">Results</a>
-            <a href="engpublications.html">Publications</a>
-            <a href="engevents.html">Events</a>
-            <a href="engscientificTeam.html">Team</a> 
-            <a href="engcontacts.html">Contact us</a>            
+        <div class="container nav-wrap">
+            <button class="nav-toggle" id="navToggle"
+                    aria-expanded="false" aria-controls="navLinks">
+                ☰ Menu
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a class="active" href="engindex.html">Home</a>
+                <a href="engforTheProject.html">Project</a>
+                <a href="engworkPakages.html">Work Packages</a>
+                <a href="engreports.html">Results</a>
+                <a href="engpublications.html">Publications</a>
+                <a href="engevents.html">Events</a>
+                <a href="engscientificTeam.html">Team</a>
+                <a href="engcontacts.html">Contact us</a>
+            </div>
         </div>
     </nav>
-    <div class="container">
-        <!-- Your content goes here -->
 
+    <div class="container">
         <h4>Project title:</h4>
         <p>Research, mathematical analysis and assessment of the influence of stress on cardiac data</p>
-        
 
         <h4>Name of the competition:</h4>
-        <p>Competition for funding fundamental scientific
-            research of young scientists and postdoctoral students - 2023.</p>
-        
+        <p>Competition for funding fundamental scientific research of young scientists and postdoctoral students - 2023.</p>
 
-        <h4>Main scientific area/thematic direction in which the project applies: </h4>
+        <h4>Main scientific area/thematic direction in which the project applies:</h4>
         <p>Mathematical Sciences and Informatics</p>
-        
+
         <h4>Additional scientific areas/thematic areas in interdisciplinary projects:</h4>
         <p>Medical Sciences</p>
 
         <h4>Type of planned scientific research (fundamental or applied):</h4>
         <p>Fundamental</p>
-        
 
         <h4>Base Organization:</h4>
         <p>Institute of Robotics - Bulgarian Academy of Sciences</p>
-        
 
         <h4>Head of the scientific team:</h4>
         <p>Assist. Prof. Ph.D. Penio Lebamovski</p>
-        <br>
 
-    
+        <br>
     </div>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                
                 <div class="footer-section">
-                    
-                    <p>Research, mathematical analysis and assessment of the influence of stress on cardiac data
-                    </p>
-                    <p>Contract to the "Scientific Research" Fund:
-                        </p>
-                        <p>КП-06-М72/1 from 05.12.2023</p>
+                    <p>Research, mathematical analysis and assessment of the influence of stress on cardiac data</p>
+                    <p>Contract to the "Scientific Research" Fund:</p>
+                    <p>KP-06-M72/1 from 05.12.2023</p>
                 </div>
-                
 
                 <div class="footer-section">
                     <img class="logoFooter" src="img/fni-bg.png" alt="Institute of Robotics Logo">
                 </div>
-
-                                
             </div>
 
-            <br>
-            <br>
-            <br>
+            <br><br><br>
+
             <div class="copyright">
                 <p>© The published materials are subject to copyright.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        const btn = document.getElementById('navToggle');
+        const links = document.getElementById('navLinks');
+
+        btn.addEventListener('click', () => {
+            const isOpen = links.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    </script>
 </body>
 </html>
