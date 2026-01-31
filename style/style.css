@@ -44,13 +44,15 @@ header .container{
   position: relative;
 }
 
-/* Logo (оставяме го голямо) */
+/* Logo */
 .logo {
-  max-width: 500px;
+  max-width: 100%;
+  width: 500px;      /* desktop target size */
   height: auto;
   display: block;
   margin: 0 auto;
 }
+
 
 /* Heading */
 .heading{
@@ -243,5 +245,72 @@ footer .copyright {
   }
   .footer-content{
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .heading {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+
+
+/* ===== Responsive collapsible nav ===== */
+.nav-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* бутонът е скрит на desktop */
+.nav-toggle{
+  display: none;
+  width: 100%;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* контейнерът с линковете */
+.nav-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Mobile behavior */
+@media screen and (max-width: 768px){
+  .nav-toggle{ display: block; }
+
+  /* по подразбиране скрито меню */
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* когато е отворено */
+  .nav-links.is-open{
+    display: flex;
+  }
+
+  /* линкове на телефон */
+  .nav-links a{
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
   }
 }
