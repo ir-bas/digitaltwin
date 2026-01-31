@@ -314,3 +314,32 @@ footer .copyright {
     border-radius: 12px;
   }
 }
+
+/* ===== FIX: badges not stretching on small screens ===== */
+ol li a{
+  /* махаме чупенето на URL-а на 2 реда */
+  overflow-wrap: normal;    /* да не wrap-ва насила */
+  
+  overflow: hidden;         /* скрий излишното */
+  text-overflow: ellipsis;  /* ... */
+
+  /* важно при flex, иначе текстът не се реже правилно */
+  max-width: 100%;
+  min-width: 0;
+
+  /* по желание: да изглежда като "pill" и да не заема цял ред */
+  align-self: flex-start;
+}
+
+/* баджът (DOI/PDF/LINK) да не се свива */
+ol li a::before{
+  flex: 0 0 auto;
+}
+
+/* по желание: на много малки екрани линкът да е 100% ширина (пак с ...) */
+@media (max-width: 480px){
+  ol li a{
+    width: 100%;
+  }
+}
+
