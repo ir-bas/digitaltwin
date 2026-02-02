@@ -1,20 +1,26 @@
 :root{
   /* Violet theme */
-  --blue-1:#6d28d9;   /* header/footer */
-  --blue-2:#5b21b6;   /* nav */
-  --blue-3:#7c3aed;   /* accents (optional) */
+  --main_color-1:#6d28d9;   /* header/footer */
+  --main_color-2:#5b21b6;   /* nav */
+  --main_color-3:#7c3aed;   /* accents (optional) */
 
-  /* neutrals (оставяме ги приятни/четими) */
+  /* neutrals */
   --text:#1d232a;
   --muted:#5b6672;
   --bg:#ffffff;
-  --card:#f7f5ff;     /* лек виолетов нюанс */
-  --border:#e7defa;   /* леко виолетов бордър */
+  --card:#f7f5ff;
+  --border:#e7defa;
 }
 
 *{ box-sizing: border-box; }
 
-body {
+/* никога да няма хоризонтален overflow на whole page */
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body{
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -26,16 +32,25 @@ body {
   line-height: 1.55;
 }
 
+/*  всички изображения да са responsive */
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* CONTAINER */
-.container {
+.container{
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
 }
 
+
 /* HEADER */
-header {
-  background-color: var(--blue-1);
+header{
+  background-color: var(--main_color-1);
   color: #fff;
 }
 
@@ -48,14 +63,12 @@ header .container{
 }
 
 /* Logo */
-.logo {
-  max-width: 100%;
+.logo{
   width: 500px;      /* desktop target size */
+  max-width: 100%;
   height: auto;
-  display: block;
   margin: 0 auto;
 }
-
 
 /* Heading */
 .heading{
@@ -63,29 +76,34 @@ header .container{
   margin: 0;
   color: #fff;
   text-shadow:
-    0 3px 6px rgba(0, 0, 0, 0.5),
-    0 8px 16px rgba(0, 0, 0, 0.4),
-    0 0 14px rgba(124, 58, 237, 0.55);
+          0 3px 6px rgba(0, 0, 0, 0.5),
+          0 8px 16px rgba(0, 0, 0, 0.4),
+          0 0 14px rgba(124, 58, 237, 0.55);
+
+  /* да се пренася на нов ред и да не прелива */
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Translate button */
 #translateButton{
   background: #ffffff;
-  color: var(--blue-1);
+  color: var(--main_color-1);
   border: 0;
   padding: 10px 14px;
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
   transition: transform .08s ease, opacity .2s ease;
+  max-width: 100%;
 }
 
 #translateButton:hover{ opacity: .92; }
 #translateButton:active{ transform: scale(0.98); }
 
 /* NAV */
-nav {
-  background-color: var(--blue-2);
+nav{
+  background-color: var(--main_color-2);
   color: #fff;
 }
 
@@ -98,24 +116,56 @@ nav .container{
   justify-content: center;
 }
 
-nav a {
+/* links */
+nav a{
   color: #fff;
   text-decoration: none;
   padding: 10px 14px;
   display: inline-block;
   border-radius: 999px;
   transition: background-color .2s ease, color .2s ease;
+
+  /*  ако някой текст стане дълъг */
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-nav a:hover {
+nav a:hover{
   background-color: rgba(255,255,255,0.18);
 }
 
 /* active link */
 nav .active{
   background-color: #ffffff;
-  color: var(--blue-1);
+  color: var(--main_color-1);
   font-weight: 700;
+}
+
+/* ===== Responsive collapsible nav ===== */
+.nav-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-toggle{
+  display: none; /* hidden on desktop */
+  width: 100%;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
 }
 
 /* MAIN CONTENT */
@@ -124,7 +174,131 @@ h4{
   font-size: 18px;
 }
 
-/* Bibliography look */
+/* ✅ FIX: всички текстове да могат да се пренасят */
+p, li, h3, h4{
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Work program blocks */
+.work-program p{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 12px 0;
+}
+
+.work-program ul{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 14px 10px 26px;
+  margin-top: -6px;
+  margin-bottom: 14px;
+
+  /* да не надува ширината */
+  max-width: 100%;
+}
+
+.work-program li{
+  margin: 6px 0;
+}
+
+/* ===== Schedule table responsive improvements ===== */
+.table-scroll{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+/* таблицата да е "max-content", за да скролва вътре */
+.schedule-table{
+  border-collapse: collapse;
+  width: max-content;  /* ключово */
+  min-width: 880px;    /* остава за wide table */
+}
+
+/* cells */
+.schedule-table th,
+.schedule-table td{
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 7px 8px;
+  font-size: 13px;
+  white-space: nowrap; /* за таблицата е ОК */
+}
+
+.schedule-table th{
+  background-color: #f2f2f2;
+}
+
+/* highlight */
+.highlight{
+  background: #e7e3ff;
+}
+
+/* sticky first column */
+.schedule-table th:first-child,
+.schedule-table td:first-child{
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+  font-weight: 700;
+}
+
+/* sticky header row */
+.schedule-table thead th{
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: #f2f2f2;
+}
+
+/* FOOTER */
+footer{
+  background-color: var(--main_color-1);
+  color: #fff;
+  padding: 22px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-section{
+  flex: 1;
+  min-width: 240px;
+
+  /*  да не избутва */
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.logoFooter{
+  width: min(360px, 90%);
+  height: auto;
+  margin: 18px auto 0;
+}
+
+footer .copyright{
+  text-align: center;
+}
+
+/* Bibliography look (ако го ползваш на други страници) */
 ol{
   margin: 10px 0 22px;
   padding-left: 22px;
@@ -138,19 +312,13 @@ ol li{
   margin: 10px 0;
 }
 
-ol li strong{
-  font-weight: 700;
-}
+ol li strong{ font-weight: 700; }
+ol li em{ color: var(--muted); }
 
-ol li em{
-  color: var(--muted);
-}
-
-/* ===== Link badges (CSS-only) ===== */
+/* Link badges */
 ol li a{
-  color: var(--blue-1);
+  color: var(--main_color-1);
   text-decoration: none;
-  word-break: break-word;
 
   display: inline-flex;
   align-items: center;
@@ -161,12 +329,17 @@ ol li a{
   background: #ffffff;
   border: 1px solid #e3e7ee;
   line-height: 1.3;
-
   margin-top: 8px;
+
+  /* да не излиза, да се реже с ... ако е прекалено дълго */
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 ol li a:hover{
-  text-decoration: none;
   border-color: rgba(12,108,180,0.35);
   background: #fbfdff;
 }
@@ -181,6 +354,7 @@ ol li a::before{
   border-radius: 999px;
   background: #eef2f7;
   color: #1d232a;
+  flex: 0 0 auto;
 }
 
 /* DOI badge */
@@ -199,123 +373,36 @@ ol li a[href$=".pdf"]::before{
   border: 1px solid rgba(52,122,188,0.25);
 }
 
-/* FOOTER */
-footer {
-  background-color: var(--blue-1);
-  color: #fff;
-  padding: 22px 0;
-  text-align: center;
-  margin-top: auto;
-}
+/* ===== Responsive ===== */
+@media (max-width: 768px){
+  .container{ padding: 14px; }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 240px;
-}
-
-.logoFooter{
-  width: min(360px, 90%);
-  height: auto;
-  display: block;
-  margin: 18px auto 0;
-}
-
-footer .copyright {
-  text-align: center;
-}
-
-/* Ако ползваш .article */
-.article {
-  display: flex;
-  align-items: center;
-}
-
-.text {
-  margin-left: 10px;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  nav .container{
-    justify-content: flex-start;
+  h3{
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 14px 0 10px;
   }
-  nav a {
-    width: 100%;
-    text-align: center;
+
+  h4{
+    font-size: 17px;
+    margin: 16px 0 10px;
   }
+
   .footer-content{
     flex-direction: column;
   }
-}
 
-@media screen and (max-width: 480px) {
-  .logo {
-    width: 90%;
-    max-width: 320px;
-  }
-
-  .heading {
-    font-size: 16px;
-    line-height: 1.3;
-  }
-}
-
-
-
-/* ===== Responsive collapsible nav ===== */
-.nav-wrap{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* бутонът е скрит на desktop */
-.nav-toggle{
-  display: none;
-  width: 100%;
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.22);
-  color: #fff;
-  padding: 12px 14px;
-  border-radius: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  text-align: center;
-}
-
-/* контейнерът с линковете */
-.nav-links{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-}
-
-/* Mobile behavior */
-@media screen and (max-width: 768px){
+  /* collapsible nav */
   .nav-toggle{ display: block; }
 
-  /* по подразбиране скрито меню */
   .nav-links{
     display: none;
     flex-direction: column;
     gap: 6px;
   }
 
-  /* когато е отворено */
-  .nav-links.is-open{
-    display: flex;
-  }
+  .nav-links.is-open{ display: flex; }
 
-  /* линкове на телефон */
   .nav-links a{
     width: 100%;
     text-align: center;
@@ -323,31 +410,35 @@ footer .copyright {
   }
 }
 
-/* ===== FIX: badges not stretching on small screens ===== */
-ol li a{
-  /* махаме чупенето на URL-а на 2 реда */
-  overflow-wrap: normal;    /* да не wrap-ва насила */
-  
-  overflow: hidden;         /* скрий излишното */
-  text-overflow: ellipsis;  /* ... */
-
-  /* важно при flex, иначе текстът не се реже правилно */
-  max-width: 100%;
-  min-width: 0;
-
-  /* по желание: да изглежда като "pill" и да не заема цял ред */
-  align-self: flex-start;
-}
-
-/* баджът (DOI/PDF/LINK) да не се свива */
-ol li a::before{
-  flex: 0 0 auto;
-}
-
-/* по желание: на много малки екрани линкът да е 100% ширина (пак с ...) */
 @media (max-width: 480px){
-  ol li a{
+  .container{ padding: 12px; }
+
+  .logo{
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .heading{
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  #translateButton{
     width: 100%;
+    max-width: 320px;
   }
 }
 
+@media (max-width: 768px){
+  /* sticky в таблица + overflow auto = често прави overflow на телефон */
+  .schedule-table th:first-child,
+  .schedule-table td:first-child,
+  .schedule-table thead th{
+    position: static !important;
+  }
+
+  /* на мобилен не ни трябва min-width 880 да бута layout-а */
+  .schedule-table{
+    min-width: 760px; /* пак ще скролва, но по-малко агресивно */
+  }
+}
