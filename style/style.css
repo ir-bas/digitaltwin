@@ -532,3 +532,11 @@ ol li a[href$=".pdf"]::before{
 .lang-flag-only img:hover{
   transform: scale(1.08);
 }
+.content1.soon{
+  text-align: center;
+  margin-top: 40px;
+
+  font-size: 18px;
+  font-style: italic;
+  color: var(--muted);
+}
