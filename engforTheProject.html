@@ -7,153 +7,186 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img class="logo" src="img/new_logo_dark_purple.png" alt="Institute of Robotics Logo">
-            <h1 class="heading">Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</h1>
-            <a href="forTheProject.html" class="lang-flag-only" title="Български">
-                <img src="img/flags/bg.svg" alt="Български">
-            </a>
-        </div>
-    </header>
-
-    <!-- RESPONSIVE NAV -->
-    <nav>
-        <div class="container nav-wrap">
-            <button class="nav-toggle" id="navToggle"
-                    aria-expanded="false" aria-controls="navLinks">
-                ☰ Menu
-            </button>
-
-            <div class="nav-links" id="navLinks">
-                <a href="engindex.html">Home</a>
-                <a class="active" href="engforTheProject.html">Project</a>
-                <a href="engworkPakages.html">Work Packages</a>
-                <a href="engreports.html">Results</a>
-                <a href="engpublications.html">Publications</a>
-                <a href="engevents.html">Events</a>
-                <a href="engscientificTeam.html">Team</a>
-                <a href="engcontacts.html">Contact us</a>
-            </div>
-        </div>
-    </nav>
-
+<header>
     <div class="container">
-
-        <h4>Relevance and significance of the scientific issue</h4>
-
-        <p>
-            Cardiovascular diseases (CVD) continue to be the leading cause of mortality and morbidity worldwide. According to the World Heart Federation (WHF), in 2021, about 20.5 million people worldwide died from CVD, which accounts for nearly one third of all deaths. There has been a significant increase in CVD deaths: from 12.1 million in 1990 to 20.5 million in 2021. According to the WHF1, 80% of premature heart attacks and strokes can be prevented (through timely prevention, digital technologies and intelligent early warning systems). The WHF has set itself the ambitious goal of reducing CVD mortality and morbidity by 30% by 2030. In this context, and in line with the global goals, the National Health Strategy 2030 includes Priority 2: Creating a health system oriented to people's needs (policy 2.5: development of e-health and digitalization of the health system), which emphasizes the need for integration of innovative digital approaches and smart solutions at the national level. <br>
-            The significance of the scientific issue has been regulated in numerous strategic documents in Bulgaria, Europe and the world in recent years. <br>
-            The scientific issue of the project follows the relevance of the tasks set in these documents, reflecting key directions for digitalization, innovation and sustainable development in healthcare. <br>
-            The issue is in line with the national and European strategic documents in the field of scientific research, digitalization and healthcare, reflecting the priorities for sustainable development and innovation. <br>
-
-        </p>
-
-        <h4>Project goals and hypotheses</h4>
-
-        <p>
-            The main goal of the project is to conduct fundamental scientific research to deepen knowledge about heart rate variability, by creating new theories, hybrid AI-based methods, algorithms and tools for analysis, modeling, recognition and prediction of conditions with physiological and diagnostic significance.
-        </p>
-
-        <p><strong>To achieve the main goal, five specific goals have been defined:</strong></p>
-
-        <ul>
-            <li>
-                <strong>Specific goal 1.</strong>
-                Study of the fundamental characteristics of heart rate variability (HRV) using classical, fractal and entropy methods, as well as methods developed in recent years (e.g. MSE-extensions, multifractal analyses, permutation entropy, distribution entropy, recurrence quantification analysis, graph-theoretical and complexity measures) in different physiological states: rest, physical/mental/cognitive load and stress induced by virtual games. Development of a methodological framework for determining an optimal minimal set of HRV parameters sufficient to reliably distinguish between different physiological and pre-pathological states.
-            </li>
-
-            <li>
-                <strong>Specific goal 2.</strong>
-                Study of HRV with new hybrid algorithms for generating cardiac data through a combination of mathematical/stochastic models with biophysical application (e.g. fBM/FGN, PRSA-inspired processes, GRF) and generative architectures (e.g. GAN, VAE, diffusion models). Creation of an enriched database for a deeper study of the dynamics of cardiac regulation and for reliable training of AI systems.
-            </li>
-
-            <li>
-                <strong>Specific goal 3.</strong>
-                Creation of algorithms for obtaining new knowledge about the short-term dynamics of cardiac time series and its prediction through AI-based neural architectures (LSTM, GRU, CNN, Transformers). Study and reveal hidden patterns and deviations associated with stress, fatigue and increased risk; evaluating their effectiveness compared to classical statistical and fractal approaches.
-            </li>
-
-            <li>
-                <strong>Specific goal 4.</strong>
-                Studying the dynamics of HRV through experiments with virtual games inducing different psychophysiological states: generating scenarios (relaxation, concentration); stress-inducing scenarios (multitasking, time limit, etc.). Validating the developed AI algorithms in real experimental conditions and assessing their applicability for personalized modeling.
-            </li>
-
-            <li>
-                <strong>Specific goal 5.</strong>
-                Developing an innovative AI- and IoT-based method for personalized prediction and stratification of cardiovascular risk by building an individual “digital twin”, which will combine real and synthetic cardio data, simulate transitions between physiological and risky states, classify states according to severity for the purpose of timely prevention and decision support in healthcare.
-            </li>
-        </ul>
-
-        <p><strong>To achieve the formulated goals, the following hypotheses will be investigated:</strong></p>
-
-        <ul>
-            <li>
-                <strong>Hypothesis 1.</strong>
-                There is a limited but sufficiently informative set of HRV indicators that can reliably distinguish between physiological and stress-induced states, and this set can be formally defined by integrating classical, fractal, entropic, etc. indices.
-            </li>
-
-            <li>
-                <strong>Hypothesis 2.</strong>
-                The hybrid combination of classical mathematical/stochastic models with modern generative AI architectures will allow the generation of synthetic cardiac recordings with statistical and physiological characteristics (DTW, Fréchet distance, spectral and entropic indices, Poincaré/multifractal indices), comparable to real data, which can be successfully used for training and validating AI algorithms.
-            </li>
-
-            <li>
-                <strong>Hypothesis 3.</strong>
-                It can be shown that AI-based neural architectures reveal hidden dynamic patterns in time-series cardioversions and achieve higher accuracy in prediction and detection of deviations compared to classical statistical and fractal methods. This will prove their applicability as a means of obtaining new knowledge about short-term cardiological dynamics, especially in short and noisy recordings.
-            </li>
-
-            <li>
-                <strong>Hypothesis 4.</strong>
-                Virtual scenarios are a reliable controlled experimental tool for inducing different psychophysiological states and for training and validating AI models for analysis and prediction, and it is assumed that through mathematical methods for analyzing the generated data, objective information will be provided for distinguishing these states.
-            </li>
-
-            <li>
-                <strong>Hypothesis 5.</strong>
-                The signal-driven digital twin, based on real and synthetic data, integrated in an IoT environment and validated through VR scenarios, is capable of predicting transitions to risky states with high accuracy. This proves its applicability as a personalized tool for prevention and stratification of cardiovascular risk.
-            </li>
-        </ul>
-
-        <h4>Ethical procedure</h4>
-
-        <p>
-            The project will be conducted in strict compliance with ethical principles and standards, and the Ethics Committee of IR-BAS will monitor the protection of the rights, dignity and security of the participants and their data.
-        </p>
-
+        <img class="logo" src="img/new_logo_dark_purple.png" alt="Institute of Robotics Logo">
+        <h1 class="heading">Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</h1>
+        <a href="forTheProject.html" class="lang-flag-only" title="Български">
+            <img src="img/flags/bg.svg" alt="Български">
+        </a>
     </div>
+</header>
 
+<!-- RESPONSIVE NAV -->
+<nav>
+    <div class="container nav-wrap">
+        <button class="nav-toggle" id="navToggle"
+                aria-expanded="false" aria-controls="navLinks">
+            ☰ Menu
+        </button>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <p>Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</p>
-                    <p>Contract to the Bulgarian National Science Fund:</p>
-                    <p>КП-06-Н97/12 from 10.12.2025</p>
-                </div>
-
-                <div class="footer-section">
-                    <img class="logoFooter" src="img/footer_eng.png" alt="Institute of Robotics Logo">
+        <div class="nav-links" id="navLinks">
+            <a href="engindex.html">Home</a>
+            <a class="active" href="engforTheProject.html">Project</a>
+            <a href="engworkPakages.html">Work Packages</a>
+            <a href="engreports.html">Results</a>
+            <div class="nav-item dropdown">
+                <span class="dropdown-toggle" tabindex="0" role="button"
+                      aria-haspopup="true" aria-expanded="false"
+                      onclick="toggleDropdown(this)"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleDropdown(this);}">
+                    Repository ▾
+                </span>
+                <div class="dropdown-menu">
+                    <a href="engrepository-data.html">Data</a>
+                    <a href="engrepository-results.html">Analysis Results</a>
+                    <a href="engrepository-visualization.html">Visualization</a>
                 </div>
             </div>
+            <a href="engpublications.html">Publications</a>
+            <a href="engevents.html">Events</a>
+            <a href="engscientificTeam.html">Team</a>
+            <a href="engcontacts.html">Contact us</a>
+        </div>
+    </div>
+</nav>
 
-            <br><br><br>
+<div class="container">
 
-            <div class="copyright">
-                <p>© The published materials are subject to copyright.</p>
+    <h4>Relevance and significance of the scientific issue</h4>
+
+    <p>
+        Cardiovascular diseases (CVD) continue to be the leading cause of mortality and morbidity worldwide. According to the World Heart Federation (WHF), in 2021, about 20.5 million people worldwide died from CVD, which accounts for nearly one third of all deaths. There has been a significant increase in CVD deaths: from 12.1 million in 1990 to 20.5 million in 2021. According to the WHF1, 80% of premature heart attacks and strokes can be prevented (through timely prevention, digital technologies and intelligent early warning systems). The WHF has set itself the ambitious goal of reducing CVD mortality and morbidity by 30% by 2030. In this context, and in line with the global goals, the National Health Strategy 2030 includes Priority 2: Creating a health system oriented to people's needs (policy 2.5: development of e-health and digitalization of the health system), which emphasizes the need for integration of innovative digital approaches and smart solutions at the national level. <br>
+        The significance of the scientific issue has been regulated in numerous strategic documents in Bulgaria, Europe and the world in recent years. <br>
+        The scientific issue of the project follows the relevance of the tasks set in these documents, reflecting key directions for digitalization, innovation and sustainable development in healthcare. <br>
+        The issue is in line with the national and European strategic documents in the field of scientific research, digitalization and healthcare, reflecting the priorities for sustainable development and innovation. <br>
+
+    </p>
+
+    <h4>Project goals and hypotheses</h4>
+
+    <p>
+        The main goal of the project is to conduct fundamental scientific research to deepen knowledge about heart rate variability, by creating new theories, hybrid AI-based methods, algorithms and tools for analysis, modeling, recognition and prediction of conditions with physiological and diagnostic significance.
+    </p>
+
+    <p><strong>To achieve the main goal, five specific goals have been defined:</strong></p>
+
+    <ul>
+        <li>
+            <strong>Specific goal 1.</strong>
+            Study of the fundamental characteristics of heart rate variability (HRV) using classical, fractal and entropy methods, as well as methods developed in recent years (e.g. MSE-extensions, multifractal analyses, permutation entropy, distribution entropy, recurrence quantification analysis, graph-theoretical and complexity measures) in different physiological states: rest, physical/mental/cognitive load and stress induced by virtual games. Development of a methodological framework for determining an optimal minimal set of HRV parameters sufficient to reliably distinguish between different physiological and pre-pathological states.
+        </li>
+
+        <li>
+            <strong>Specific goal 2.</strong>
+            Study of HRV with new hybrid algorithms for generating cardiac data through a combination of mathematical/stochastic models with biophysical application (e.g. fBM/FGN, PRSA-inspired processes, GRF) and generative architectures (e.g. GAN, VAE, diffusion models). Creation of an enriched database for a deeper study of the dynamics of cardiac regulation and for reliable training of AI systems.
+        </li>
+
+        <li>
+            <strong>Specific goal 3.</strong>
+            Creation of algorithms for obtaining new knowledge about the short-term dynamics of cardiac time series and its prediction through AI-based neural architectures (LSTM, GRU, CNN, Transformers). Study and reveal hidden patterns and deviations associated with stress, fatigue and increased risk; evaluating their effectiveness compared to classical statistical and fractal approaches.
+        </li>
+
+        <li>
+            <strong>Specific goal 4.</strong>
+            Studying the dynamics of HRV through experiments with virtual games inducing different psychophysiological states: generating scenarios (relaxation, concentration); stress-inducing scenarios (multitasking, time limit, etc.). Validating the developed AI algorithms in real experimental conditions and assessing their applicability for personalized modeling.
+        </li>
+
+        <li>
+            <strong>Specific goal 5.</strong>
+            Developing an innovative AI- and IoT-based method for personalized prediction and stratification of cardiovascular risk by building an individual “digital twin”, which will combine real and synthetic cardio data, simulate transitions between physiological and risky states, classify states according to severity for the purpose of timely prevention and decision support in healthcare.
+        </li>
+    </ul>
+
+    <p><strong>To achieve the formulated goals, the following hypotheses will be investigated:</strong></p>
+
+    <ul>
+        <li>
+            <strong>Hypothesis 1.</strong>
+            There is a limited but sufficiently informative set of HRV indicators that can reliably distinguish between physiological and stress-induced states, and this set can be formally defined by integrating classical, fractal, entropic, etc. indices.
+        </li>
+
+        <li>
+            <strong>Hypothesis 2.</strong>
+            The hybrid combination of classical mathematical/stochastic models with modern generative AI architectures will allow the generation of synthetic cardiac recordings with statistical and physiological characteristics (DTW, Fréchet distance, spectral and entropic indices, Poincaré/multifractal indices), comparable to real data, which can be successfully used for training and validating AI algorithms.
+        </li>
+
+        <li>
+            <strong>Hypothesis 3.</strong>
+            It can be shown that AI-based neural architectures reveal hidden dynamic patterns in time-series cardioversions and achieve higher accuracy in prediction and detection of deviations compared to classical statistical and fractal methods. This will prove their applicability as a means of obtaining new knowledge about short-term cardiological dynamics, especially in short and noisy recordings.
+        </li>
+
+        <li>
+            <strong>Hypothesis 4.</strong>
+            Virtual scenarios are a reliable controlled experimental tool for inducing different psychophysiological states and for training and validating AI models for analysis and prediction, and it is assumed that through mathematical methods for analyzing the generated data, objective information will be provided for distinguishing these states.
+        </li>
+
+        <li>
+            <strong>Hypothesis 5.</strong>
+            The signal-driven digital twin, based on real and synthetic data, integrated in an IoT environment and validated through VR scenarios, is capable of predicting transitions to risky states with high accuracy. This proves its applicability as a personalized tool for prevention and stratification of cardiovascular risk.
+        </li>
+    </ul>
+
+    <h4>Ethical procedure</h4>
+
+    <p>
+        The project will be conducted in strict compliance with ethical principles and standards, and the Ethics Committee of IR-BAS will monitor the protection of the rights, dignity and security of the participants and their data.
+    </p>
+
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</p>
+                <p>Contract to the Bulgarian National Science Fund:</p>
+                <p>КП-06-Н97/12 from 10.12.2025</p>
+            </div>
+
+            <div class="footer-section">
+                <img class="logoFooter" src="img/footer_eng.png" alt="Institute of Robotics Logo">
             </div>
         </div>
-    </footer>
 
-    <!-- NAV TOGGLE SCRIPT -->
-    <script>
-        const btn = document.getElementById('navToggle');
-        const links = document.getElementById('navLinks');
+        <br><br><br>
 
-        btn.addEventListener('click', () => {
-            const isOpen = links.classList.toggle('is-open');
-            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        <div class="copyright">
+            <p>© The published materials are subject to copyright.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- NAV TOGGLE SCRIPT -->
+<script>
+    const btn = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+
+    btn.addEventListener('click', () => {
+        const isOpen = links.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+</script>
+
+<script>
+    function toggleDropdown(el) {
+        const menu = el.nextElementSibling;
+        const isOpen = menu.classList.toggle('is-open');
+        el.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    // затваряне при клик извън менюто
+    document.addEventListener('click', (e) => {
+        document.querySelectorAll('.dropdown-menu.is-open').forEach((menu) => {
+            const item = menu.closest('.nav-item');
+            if (item && !item.contains(e.target)) {
+                menu.classList.remove('is-open');
+                const toggle = item.querySelector('.dropdown-toggle');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            }
         });
-    </script>
+    });
+</script>
 </body>
 </html>

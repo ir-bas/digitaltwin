@@ -7,116 +7,149 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img class="logo" src="img/new_logo_dark_purple.png" alt="Institute of Robotics Logo">
-            <h1 class="heading">Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</h1>
-            <a href="contacts.html" class="lang-flag-only" title="Български">
-                <img src="img/flags/bg.svg" alt="Български">
-            </a>
-
-        </div>
-    </header>
-
-    <!-- RESPONSIVE NAV -->
-    <nav>
-        <div class="container nav-wrap">
-            <button class="nav-toggle" id="navToggle"
-                    aria-expanded="false" aria-controls="navLinks">
-                ☰ Menu
-            </button>
-
-            <div class="nav-links" id="navLinks">
-                <a href="engindex.html">Home</a>
-                <a href="engforTheProject.html">Project</a>
-                <a href="engworkPakages.html">Work Packages</a>
-                <a href="engreports.html">Results</a>
-                <a href="engpublications.html">Publications</a>
-                <a href="engevents.html">Events</a>
-                <a href="engscientificTeam.html">Team</a>
-                <a class="active" href="engcontacts.html">Contact us</a>
-            </div>
-        </div>
-    </nav>
-
+<header>
     <div class="container">
-
-        <h3>Contacts</h3>
-
-        <section class="contact-card">
-            <div class="contact-row">
-                <div class="contact-label">Coordinator of the research team:</div>
-                <div class="contact-value">
-                    Assoc. Prof. PhD Galya Nikolova Georgieva-Tsaneva
-                </div>
-            </div>
-
-            <div class="contact-row">
-                <div class="contact-label">Applying organisation:</div>
-                <div class="contact-value">
-                    Institute of Robotics – Bulgarian Academy of Sciences
-                </div>
-            </div>
-
-            <div class="contact-row">
-                <div class="contact-label">Address:</div>
-                <div class="contact-value">
-                    Institute of Robotics, Medical Robotics Section, <br>
-                    5 Nish St., 5000 Veliko Tarnovo, Bulgaria
-                </div>
-            </div>
-
-            <div class="contact-row">
-                <div class="contact-label">Phone:</div>
-                <div class="contact-value">
-                    <a class="contact-link" href="tel:+359878111283">+359 87 811 1283</a>
-                </div>
-            </div>
-
-            <div class="contact-row">
-                <div class="contact-label">Email:</div>
-                <div class="contact-value contact-emails">
-                    <a class="contact-link" href="mailto:galitcaneva@abv.bg">galitcaneva@abv.bg</a>
-                    <span class="dot">•</span>
-                    <a class="contact-link" href="mailto:galitsaneva@abv.bg">galitsaneva@abv.bg</a>
-                </div>
-            </div>
-        </section>
+        <img class="logo" src="img/new_logo_dark_purple.png" alt="Institute of Robotics Logo">
+        <h1 class="heading">Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</h1>
+        <a href="contacts.html" class="lang-flag-only" title="Български">
+            <img src="img/flags/bg.svg" alt="Български">
+        </a>
 
     </div>
+</header>
 
+<!-- RESPONSIVE NAV -->
+<nav>
+    <div class="container nav-wrap">
+        <button class="nav-toggle" id="navToggle"
+                aria-expanded="false" aria-controls="navLinks">
+            ☰ Menu
+        </button>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <p>Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</p>
-                    <p>Contract to the Bulgarian National Science Fund:</p>
-                    <p>КП-06-Н97/12 from 10.12.2025</p>
-                </div>
-
-                <div class="footer-section">
-                    <img class="logoFooter" src="img/footer_eng.png" alt="Institute of Robotics Logo">
+        <div class="nav-links" id="navLinks">
+            <a href="engindex.html">Home</a>
+            <a href="engforTheProject.html">Project</a>
+            <a href="engworkPakages.html">Work Packages</a>
+            <a href="engreports.html">Results</a>
+            <div class="nav-item dropdown">
+                <span class="dropdown-toggle" tabindex="0" role="button"
+                      aria-haspopup="true" aria-expanded="false"
+                      onclick="toggleDropdown(this)"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleDropdown(this);}">
+                    Repository ▾
+                </span>
+                <div class="dropdown-menu">
+                    <a href="engrepository-data.html">Data</a>
+                    <a href="engrepository-results.html">Analysis Results</a>
+                    <a href="engrepository-visualization.html">Visualization</a>
                 </div>
             </div>
+            <a href="engpublications.html">Publications</a>
+            <a href="engevents.html">Events</a>
+            <a href="engscientificTeam.html">Team</a>
+            <a class="active" href="engcontacts.html">Contact us</a>
+        </div>
+    </div>
+</nav>
 
-            <br><br><br>
+<div class="container">
 
-            <div class="copyright">
-                <p>© The published materials are subject to copyright.</p>
+    <h3>Contacts</h3>
+
+    <section class="contact-card">
+        <div class="contact-row">
+            <div class="contact-label">Coordinator of the research team:</div>
+            <div class="contact-value">
+                Assoc. Prof. PhD Galya Nikolova Georgieva-Tsaneva
             </div>
         </div>
-    </footer>
 
-    <!-- NAV TOGGLE SCRIPT -->
-    <script>
-        const btn = document.getElementById('navToggle');
-        const links = document.getElementById('navLinks');
+        <div class="contact-row">
+            <div class="contact-label">Applying organisation:</div>
+            <div class="contact-value">
+                Institute of Robotics – Bulgarian Academy of Sciences
+            </div>
+        </div>
 
-        btn.addEventListener('click', () => {
-            const isOpen = links.classList.toggle('is-open');
-            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        <div class="contact-row">
+            <div class="contact-label">Address:</div>
+            <div class="contact-value">
+                Institute of Robotics, Medical Robotics Section, <br>
+                5 Nish St., 5000 Veliko Tarnovo, Bulgaria
+            </div>
+        </div>
+
+        <div class="contact-row">
+            <div class="contact-label">Phone:</div>
+            <div class="contact-value">
+                <a class="contact-link" href="tel:+359878111283">+359 87 811 1283</a>
+            </div>
+        </div>
+
+        <div class="contact-row">
+            <div class="contact-label">Email:</div>
+            <div class="contact-value contact-emails">
+                <a class="contact-link" href="mailto:galitcaneva@abv.bg">galitcaneva@abv.bg</a>
+                <span class="dot">•</span>
+                <a class="contact-link" href="mailto:galitsaneva@abv.bg">galitsaneva@abv.bg</a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</p>
+                <p>Contract to the Bulgarian National Science Fund:</p>
+                <p>КП-06-Н97/12 from 10.12.2025</p>
+            </div>
+
+            <div class="footer-section">
+                <img class="logoFooter" src="img/footer_eng.png" alt="Institute of Robotics Logo">
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="copyright">
+            <p>© The published materials are subject to copyright.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- NAV TOGGLE SCRIPT -->
+<script>
+    const btn = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+
+    btn.addEventListener('click', () => {
+        const isOpen = links.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+</script>
+
+<script>
+    function toggleDropdown(el) {
+        const menu = el.nextElementSibling;
+        const isOpen = menu.classList.toggle('is-open');
+        el.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    // затваряне при клик извън менюто
+    document.addEventListener('click', (e) => {
+        document.querySelectorAll('.dropdown-menu.is-open').forEach((menu) => {
+            const item = menu.closest('.nav-item');
+            if (item && !item.contains(e.target)) {
+                menu.classList.remove('is-open');
+                const toggle = item.querySelector('.dropdown-toggle');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            }
         });
-    </script>
+    });
+</script>
 </body>
 </html>

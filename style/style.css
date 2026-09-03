@@ -540,3 +540,79 @@ ol li a[href$=".pdf"]::before{
   font-style: italic;
   color: var(--muted);
 }
+
+/* Dropdown container */
+.nav-item {
+  position: relative;
+}
+
+/* Toggle text */
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 10px 14px;
+  display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #2a2440; /* съобразено с тъмно-лилавата тема */
+  min-width: 220px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+/* Open state controlled by JS via class (no more inline style,
+   so it plays nicely with the hover rule below and always toggles cleanly) */
+.dropdown-menu.is-open {
+  display: block;
+}
+
+/* Dropdown links */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.dropdown-menu a:hover {
+  background: #3d3560;
+}
+
+/* Show on hover ONLY on devices that support hover (desktop) */
+@media (hover: hover) {
+  .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* ===== Mobile dropdown fixes ===== */
+@media (max-width: 768px){
+  /* On mobile the dropdown must push content down instead of floating
+     over the links below it */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    min-width: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    margin-top: 6px;
+  }
+
+  .dropdown-menu a {
+    text-align: center;
+    border-radius: 12px;
+  }
+
+  /* Match the full-width, centered look of the other nav links */
+  .dropdown-toggle {
+    width: 100%;
+    text-align: center;
+    border-radius: 12px;
+  }
+}

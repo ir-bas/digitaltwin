@@ -7,155 +7,188 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img class="logo" src="img/new_logo_dark_purple.png" alt="Institute of Robotics Logo">
-            <h1 class="heading">Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</h1>
-            <a href="reports.html" class="lang-flag-only" title="Български">
-                <img src="img/flags/bg.svg" alt="Български">
-            </a>
-        </div>
-    </header>
-
-    <!-- RESPONSIVE NAV -->
-    <nav>
-        <div class="container nav-wrap">
-            <button class="nav-toggle" id="navToggle"
-                    aria-expanded="false" aria-controls="navLinks">
-                ☰ Menu
-            </button>
-
-            <div class="nav-links" id="navLinks">
-                <a href="engindex.html">Home</a>
-                <a href="engforTheProject.html">Project</a>
-                <a href="engworkPakages.html">Work Packages</a>
-                <a class="active" href="engreports.html">Results</a>
-                <a href="engpublications.html">Publications</a>
-                <a href="engevents.html">Events</a>
-                <a href="engscientificTeam.html">Team</a>
-                <a href="engcontacts.html">Contact us</a>
-            </div>
-        </div>
-    </nav>
-
+<header>
     <div class="container">
-        <h3>Expected Results of the Project Implementation</h3>
-
-        <p>
-            In accordance with the project objectives and the implementation of the work program,
-            the expected results are as follows:
-        </p>
-
-        <ol>
-            <li>
-                <strong>Project management and reporting.</strong><br>
-                Timely submission of reports for all Work Packages and Project Stages.
-                Development of a comprehensive methodology for project sustainability and risk management.
-                Achievement of the planned scientific results with high quality, delivered on time
-                and in compliance with ethical regulations and the protection of volunteers’ data.
-            </li>
-
-            <li>
-                <strong>Methodological framework for HRV analysis.</strong><br>
-                Development, testing and validation of a new methodological framework for HRV analysis,
-                integrating classical, fractal, entropic and nonlinear methods into a unified concept.
-                Proven effectiveness and universality of the framework for real-world data.
-                The framework will include a minimal yet informative set of indicators capable of reliably
-                distinguishing physiological, stress-induced and pre-risk states.
-            </li>
-
-            <li>
-                <strong>Synthetic cardiological data.</strong><br>
-                Objective assessment of the advantages and limitations of different approaches
-                for generating cardiological data and selection of the most effective and reliable
-                method for practical application.
-                Formulation of principles and criteria for building synthetic databases with high
-                physiological fidelity and sufficient variability and statistical coverage
-                for training and validation of AI algorithms.
-            </li>
-
-            <li>
-                <strong>New indicators, dependencies and biomarkers.</strong><br>
-                Discovery of new indicators and correlations enabling more accurate assessment
-                and differentiation of physiological states.
-                Identification of new dependencies between HRV parameters and physiological states
-                (rest, cognitive load, stress, pre-risk states) that cannot be clearly revealed by
-                classical methods.
-                Definition of potential biomarkers and combined indices for improved state stratification.
-                Identification of new regularities and latent factors that enrich existing knowledge
-                of autonomic regulation and serve as a basis for personalized AI models and digital twins.
-            </li>
-
-            <li>
-                <strong>VR/MR as a research tool.</strong><br>
-                Establishment of a scientific rationale for considering VR/MR environments
-                as an independent research problem.
-                Definition of criteria for reliability, applicability and reproducibility
-                of virtual stimuli in the study of psychophysiological responses.
-            </li>
-
-            <li>
-                <strong>Personalized digital twins and clinical validation.</strong><br>
-                Study of patients with different diagnoses using personalized digital twins, including:
-                <ul>
-                    <li>Identification of new dependencies between HRV indicators and clinical conditions;</li>
-                    <li>Development of biomarkers for risk assessment and recovery dynamics;</li>
-                    <li>Demonstration of the applicability of digital twins as scientific tools
-                        for studying pre-risk and pathological conditions.</li>
-                </ul>
-            </li>
-
-            <li>
-                <strong>Dissemination of results and publication activity.</strong><br>
-                Open access scientific publications (total for both project stages), including:
-                <ul>
-                    <li>For the entire project: <strong>8</strong> publications with Impact Factor (IF)
-                        and <strong>4</strong> publications with SCImago Journal Rank (SJR);</li>
-                    <li>Additionally, <strong>6</strong> more publications in refereed and indexed journals;</li>
-                    <li>Participation in international and national seminars and conferences;</li>
-                    <li>Implementation of an open access repository for the purpose of open source and open access, 
-                        prepared recommendations, public publications, etc.</li>
-                </ul>
-            </li>
-
-            <li>
-                <strong>Project website.</strong><br>
-                Creation and periodic updating of the project website.
-            </li>
-        </ol>
+        <img class="logo" src="img/new_logo_dark_purple.png" alt="Institute of Robotics Logo">
+        <h1 class="heading">Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</h1>
+        <a href="reports.html" class="lang-flag-only" title="Български">
+            <img src="img/flags/bg.svg" alt="Български">
+        </a>
     </div>
+</header>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <p>Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</p>
-                    <p>Contract to the Bulgarian National Science Fund:</p>
-                    <p>КП-06-Н97/12 from 10.12.2025</p>
-                </div>
+<!-- RESPONSIVE NAV -->
+<nav>
+    <div class="container nav-wrap">
+        <button class="nav-toggle" id="navToggle"
+                aria-expanded="false" aria-controls="navLinks">
+            ☰ Menu
+        </button>
 
-                <div class="footer-section">
-                    <img class="logoFooter" src="img/footer_eng.png" alt="Institute of Robotics Logo">
+        <div class="nav-links" id="navLinks">
+            <a href="engindex.html">Home</a>
+            <a href="engforTheProject.html">Project</a>
+            <a href="engworkPakages.html">Work Packages</a>
+            <a class="active" href="engreports.html">Results</a>
+            <div class="nav-item dropdown">
+                <span class="dropdown-toggle" tabindex="0" role="button"
+                      aria-haspopup="true" aria-expanded="false"
+                      onclick="toggleDropdown(this)"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleDropdown(this);}">
+                    Repository ▾
+                </span>
+                <div class="dropdown-menu">
+                    <a href="engrepository-data.html">Data</a>
+                    <a href="engrepository-results.html">Analysis Results</a>
+                    <a href="engrepository-visualization.html">Visualization</a>
                 </div>
             </div>
+            <a href="engpublications.html">Publications</a>
+            <a href="engevents.html">Events</a>
+            <a href="engscientificTeam.html">Team</a>
+            <a href="engcontacts.html">Contact us</a>
+        </div>
+    </div>
+</nav>
 
-            <br><br><br>
+<div class="container">
+    <h3>Expected Results of the Project Implementation</h3>
 
-            <div class="copyright">
-                <p>© The published materials are subject to copyright.</p>
+    <p>
+        In accordance with the project objectives and the implementation of the work program,
+        the expected results are as follows:
+    </p>
+
+    <ol>
+        <li>
+            <strong>Project management and reporting.</strong><br>
+            Timely submission of reports for all Work Packages and Project Stages.
+            Development of a comprehensive methodology for project sustainability and risk management.
+            Achievement of the planned scientific results with high quality, delivered on time
+            and in compliance with ethical regulations and the protection of volunteers’ data.
+        </li>
+
+        <li>
+            <strong>Methodological framework for HRV analysis.</strong><br>
+            Development, testing and validation of a new methodological framework for HRV analysis,
+            integrating classical, fractal, entropic and nonlinear methods into a unified concept.
+            Proven effectiveness and universality of the framework for real-world data.
+            The framework will include a minimal yet informative set of indicators capable of reliably
+            distinguishing physiological, stress-induced and pre-risk states.
+        </li>
+
+        <li>
+            <strong>Synthetic cardiological data.</strong><br>
+            Objective assessment of the advantages and limitations of different approaches
+            for generating cardiological data and selection of the most effective and reliable
+            method for practical application.
+            Formulation of principles and criteria for building synthetic databases with high
+            physiological fidelity and sufficient variability and statistical coverage
+            for training and validation of AI algorithms.
+        </li>
+
+        <li>
+            <strong>New indicators, dependencies and biomarkers.</strong><br>
+            Discovery of new indicators and correlations enabling more accurate assessment
+            and differentiation of physiological states.
+            Identification of new dependencies between HRV parameters and physiological states
+            (rest, cognitive load, stress, pre-risk states) that cannot be clearly revealed by
+            classical methods.
+            Definition of potential biomarkers and combined indices for improved state stratification.
+            Identification of new regularities and latent factors that enrich existing knowledge
+            of autonomic regulation and serve as a basis for personalized AI models and digital twins.
+        </li>
+
+        <li>
+            <strong>VR/MR as a research tool.</strong><br>
+            Establishment of a scientific rationale for considering VR/MR environments
+            as an independent research problem.
+            Definition of criteria for reliability, applicability and reproducibility
+            of virtual stimuli in the study of psychophysiological responses.
+        </li>
+
+        <li>
+            <strong>Personalized digital twins and clinical validation.</strong><br>
+            Study of patients with different diagnoses using personalized digital twins, including:
+            <ul>
+                <li>Identification of new dependencies between HRV indicators and clinical conditions;</li>
+                <li>Development of biomarkers for risk assessment and recovery dynamics;</li>
+                <li>Demonstration of the applicability of digital twins as scientific tools
+                    for studying pre-risk and pathological conditions.</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Dissemination of results and publication activity.</strong><br>
+            Open access scientific publications (total for both project stages), including:
+            <ul>
+                <li>For the entire project: <strong>8</strong> publications with Impact Factor (IF)
+                    and <strong>4</strong> publications with SCImago Journal Rank (SJR);</li>
+                <li>Additionally, <strong>6</strong> more publications in refereed and indexed journals;</li>
+                <li>Participation in international and national seminars and conferences;</li>
+                <li>Implementation of an open access repository for the purpose of open source and open access,
+                    prepared recommendations, public publications, etc.</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Project website.</strong><br>
+            Creation and periodic updating of the project website.
+        </li>
+    </ol>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</p>
+                <p>Contract to the Bulgarian National Science Fund:</p>
+                <p>КП-06-Н97/12 from 10.12.2025</p>
+            </div>
+
+            <div class="footer-section">
+                <img class="logoFooter" src="img/footer_eng.png" alt="Institute of Robotics Logo">
             </div>
         </div>
-    </footer>
 
-    <!-- NAV TOGGLE SCRIPT -->
-    <script>
-        const btn = document.getElementById('navToggle');
-        const links = document.getElementById('navLinks');
+        <br><br><br>
 
-        btn.addEventListener('click', () => {
-            const isOpen = links.classList.toggle('is-open');
-            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        <div class="copyright">
+            <p>© The published materials are subject to copyright.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- NAV TOGGLE SCRIPT -->
+<script>
+    const btn = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+
+    btn.addEventListener('click', () => {
+        const isOpen = links.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+</script>
+
+<script>
+    function toggleDropdown(el) {
+        const menu = el.nextElementSibling;
+        const isOpen = menu.classList.toggle('is-open');
+        el.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    // затваряне при клик извън менюто
+    document.addEventListener('click', (e) => {
+        document.querySelectorAll('.dropdown-menu.is-open').forEach((menu) => {
+            const item = menu.closest('.nav-item');
+            if (item && !item.contains(e.target)) {
+                menu.classList.remove('is-open');
+                const toggle = item.querySelector('.dropdown-toggle');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            }
         });
-    </script>
+    });
+</script>
 </body>
 </html>
