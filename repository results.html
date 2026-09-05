@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Резултати от анализи</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <img class="logo" src="img/new_logo_dark_purple.png" alt="Institute of Robotics Logo">
+    <h1 class="heading">Изследване на AI-базирани методи за моделиране, анализ и прогнозиране на биомедицински времеви серии чрез прилагане на концепция за дигитален близнак</h1>
+    <a href="engrepository-results.html" class="lang-flag-only" title="English">
+      <img src="img/flags/gb.svg" alt="English">
+    </a>
+  </div>
+</header>
+
+<nav>
+  <div class="container nav-wrap">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+      ☰ Меню
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Начало</a>
+      <a href="forTheProject.html">За проекта</a>
+      <a href="workPakages.html">Работни пакети</a>
+      <a href="reports.html">Резултати</a>
+      <div class="nav-item dropdown">
+                <span class="dropdown-toggle active" tabindex="0" role="button"
+                      aria-haspopup="true" aria-expanded="false"
+                      onclick="toggleDropdown(this)"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleDropdown(this);}">
+                    Хранилище ▾
+                </span>
+        <div class="dropdown-menu">
+          <a href="repository-data.html">Данни</a>
+          <a class="active" href="repository-results.html">Резултати от анализи</a>
+          <a href="repository-visualization.html">Визуализация</a>
+        </div>
+      </div>
+      <a href="publications.html">Публикации</a>
+      <a href="events.html">Събития</a>
+      <a href="scientificTeam.html">Екип</a>
+      <a href="contacts.html">Контакти</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h3>Резултати от анализи</h3>
+  <p class="repo-intro">Тук ще намерите резултатите от извършените анализи по проекта — статистически резултати, извлечени биомаркери и валидационни отчети. Съдържанието ще се допълва след приключване на съответните етапи.</p>
+  <div class="repo-grid">
+    <div class="repo-card">
+      <div class="repo-card-icon">📈</div>
+      <h5>Резултати от статистически анализи</h5>
+      <p class="repo-desc">Обобщени статистически анализи на HRV параметри и физиологични състояния (покой, стрес, когнитивно натоварване).</p>
+      <span class="repo-status">Очаква се</span>
+      <span class="repo-btn is-disabled">Все още не е налично</span>
+    </div>
+    <div class="repo-card">
+      <div class="repo-card-icon">🔎</div>
+      <h5>Извлечени биомаркери и индикатори</h5>
+      <p class="repo-desc">Новооткрити индикатори, зависимости и потенциални биомаркери за оценка на риска и възстановяването.</p>
+      <span class="repo-status">Очаква се</span>
+      <span class="repo-btn is-disabled">Все още не е налично</span>
+    </div>
+    <div class="repo-card">
+      <div class="repo-card-icon">✅</div>
+      <h5>Валидационни отчети</h5>
+      <p class="repo-desc">Отчети за тестване и валидиране на методологичната рамка и на персонализираните дигитални близнаци.</p>
+      <span class="repo-status">Очаква се</span>
+      <span class="repo-btn is-disabled">Все още не е налично</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <p>Изследване на AI-базирани методи за моделиране, анализ и прогнозиране на биомедицински времеви серии чрез прилагане на концепция за дигитален близнак</p>
+        <p>Договор към Фонд „Научни Изследвания“:</p>
+        <p>КП-06-Н97/12 от 10.12.2025</p>
+      </div>
+
+      <div class="footer-section">
+        <img class="logoFooter" src="img/fni-logo-white-background.png" alt="Institute of Robotics Logo">
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="copyright">
+      <p>© Публикуваните материали са обект на авторско право.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+
+  btn.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+</script>
+
+<script>
+  function toggleDropdown(el) {
+    const menu = el.nextElementSibling;
+    const isOpen = menu.classList.toggle('is-open');
+    el.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  // затваряне при клик извън менюто
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.dropdown-menu.is-open').forEach((menu) => {
+      const item = menu.closest('.nav-item');
+      if (item && !item.contains(e.target)) {
+        menu.classList.remove('is-open');
+        const toggle = item.querySelector('.dropdown-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <img class="logo" src="img/new_logo_dark_purple.png" alt="Institute of Robotics Logo">
+    <h1 class="heading">Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</h1>
+    <a href="repository-data.html" class="lang-flag-only" title="Български">
+      <img src="img/flags/bg.svg" alt="Български">
+    </a>
+  </div>
+</header>
+
+<nav>
+  <div class="container nav-wrap">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+      ☰ Menu
+    </button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="engindex.html">Home</a>
+      <a href="engforTheProject.html">Project</a>
+      <a href="engworkPakages.html">Work Packages</a>
+      <a href="engreports.html">Results</a>
+      <div class="nav-item dropdown">
+                <span class="dropdown-toggle active" tabindex="0" role="button"
+                      aria-haspopup="true" aria-expanded="false"
+                      onclick="toggleDropdown(this)"
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleDropdown(this);}">
+                    Repository ▾
+                </span>
+        <div class="dropdown-menu">
+          <a class="active" href="engrepository-data.html">Data</a>
+          <a href="engrepository-results.html">Analysis Results</a>
+          <a href="engrepository-visualization.html">Visualization</a>
+        </div>
+      </div>
+      <a href="engpublications.html">Publications</a>
+      <a href="engevents.html">Events</a>
+      <a href="engscientificTeam.html">Team</a>
+      <a href="engcontacts.html">Contact us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h3>Data</h3>
+  <p class="repo-intro">This section will host the datasets collected and generated within the project — real and synthetic cardiological recordings, along with accompanying documentation. The section is updated as the research progresses.</p>
+  <div class="repo-grid">
+    <div class="repo-card">
+      <div class="repo-card-icon">📊</div>
+      <h5>Real HRV data (anonymized)</h5>
+      <p class="repo-desc">Heart rate variability recordings collected within the project, in compliance with ethical regulations and volunteer data protection.</p>
+      <span class="repo-status">Coming soon</span>
+      <span class="repo-btn is-disabled">Not yet available</span>
+    </div>
+    <div class="repo-card">
+      <div class="repo-card-icon">🧬</div>
+      <h5>Synthetic cardiological data</h5>
+      <p class="repo-desc">Generated synthetic datasets with high physiological fidelity, used for training and validating AI algorithms.</p>
+      <span class="repo-status">Coming soon</span>
+      <span class="repo-btn is-disabled">Not yet available</span>
+    </div>
+    <div class="repo-card">
+      <div class="repo-card-icon">📝</div>
+      <h5>Metadata & annotation protocols</h5>
+      <p class="repo-desc">Documentation describing data structure, collection methodology and annotation guidelines.</p>
+      <span class="repo-status">Coming soon</span>
+      <span class="repo-btn is-disabled">Not yet available</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <p>Research on AI-based methods for modeling, analyzing and forecasting biomedical time series by applying a digital twin concept</p>
+        <p>Contract to the Bulgarian National Science Fund:</p>
+        <p>КП-06-Н97/12 from 10.12.2025</p>
+      </div>
+
+      <div class="footer-section">
+        <img class="logoFooter" src="img/footer_eng.png" alt="Institute of Robotics Logo">
+      </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="copyright">
+      <p>© The published materials are subject to copyright.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+
+  btn.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+</script>
+
+<script>
+  function toggleDropdown(el) {
+    const menu = el.nextElementSibling;
+    const isOpen = menu.classList.toggle('is-open');
+    el.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  // затваряне при клик извън менюто
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.dropdown-menu.is-open').forEach((menu) => {
+      const item = menu.closest('.nav-item');
+      if (item && !item.contains(e.target)) {
+        menu.classList.remove('is-open');
+        const toggle = item.querySelector('.dropdown-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>
+</body>
+</html>
